@@ -39,6 +39,7 @@ public class Ventana1 extends javax.swing.JFrame {
         CargarArchivo = new javax.swing.JButton();
         MostrarDireccion = new javax.swing.JTextField();
         BotonSalirMenu = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -73,6 +74,9 @@ public class Ventana1 extends javax.swing.JFrame {
         });
         getContentPane().add(BotonSalirMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 12, 40, -1));
 
+        jLabel1.setText("Dale click al boton \"Cargar Archivo\" y siga las instrucciones");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -94,7 +98,7 @@ public class Ventana1 extends javax.swing.JFrame {
                         BufferedReader reader = new BufferedReader(new FileReader(nombrearchivo));
 
                         // Abre el archivo de salida
-                        FileWriter writer = new FileWriter("test\\Data\\nuevo_amazon.txt");
+                        FileWriter writer = new FileWriter("test\\Data\\usuarios.txt");
 
                         // Lee cada línea del archivo de entrada y la escribe en el archivo de salida
                         String linea;
@@ -183,6 +187,7 @@ public class Ventana1 extends javax.swing.JFrame {
     private javax.swing.JButton BotonSalirMenu;
     private javax.swing.JButton CargarArchivo;
     private javax.swing.JTextField MostrarDireccion;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

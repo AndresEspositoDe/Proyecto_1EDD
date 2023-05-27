@@ -4,6 +4,7 @@
  */
 package Interface;
 
+import Clases.Funciones;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -38,6 +39,7 @@ public class Ventana1_2 extends javax.swing.JFrame {
         CargarArchivo = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         BotonSalirMenu = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusable(false);
@@ -71,6 +73,9 @@ public class Ventana1_2 extends javax.swing.JFrame {
         });
         jPanel1.add(BotonSalirMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 40, -1));
 
+        jLabel1.setText("Dale click al boton \"Cargar Archivo\" y siga las instrucciones");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 300));
 
         pack();
@@ -102,8 +107,9 @@ public class Ventana1_2 extends javax.swing.JFrame {
                         BufferedReader reader = new BufferedReader(new FileReader(nombrearchivo));
 
                         // Abre el archivo de salida
-                        FileWriter writer = new FileWriter("test\\Data\\nuevo_amazon.txt");
+                        FileWriter writer = new FileWriter("test\\Data\\usuarios.txt");
 
+                        Funciones.borrartxt();
                         // Lee cada línea del archivo de entrada y la escribe en el archivo de salida
                         String linea;
                         while ((linea = reader.readLine()) != null) {
@@ -182,6 +188,7 @@ public class Ventana1_2 extends javax.swing.JFrame {
     private javax.swing.JButton BotonSalirMenu;
     private javax.swing.JButton CargarArchivo;
     private javax.swing.JTextField MostrarDireccion;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

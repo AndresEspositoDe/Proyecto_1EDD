@@ -4,6 +4,10 @@
  */
 package Interface;
 
+import Clases.Funciones;
+import java.io.File;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author andre
@@ -26,31 +30,18 @@ public class Ventana1_1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CargArchivo = new javax.swing.JToggleButton();
-        ActArchivos = new javax.swing.JToggleButton();
         jPanel1 = new javax.swing.JPanel();
         BotonSalirMenu = new javax.swing.JButton();
+        BorrarArchivos = new javax.swing.JToggleButton();
+        CargArchivo = new javax.swing.JToggleButton();
+        ActArchivos = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        CargArchivo.setText("Carga de archivo");
-        CargArchivo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CargArchivoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(CargArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 72, 143, -1));
-
-        ActArchivos.setText("Actualizacion de archivos");
-        ActArchivos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ActArchivosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ActArchivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 202, -1, -1));
 
         jPanel1.setFocusable(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -64,24 +55,49 @@ public class Ventana1_1 extends javax.swing.JFrame {
         });
         jPanel1.add(BotonSalirMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 40, -1));
 
+        BorrarArchivos.setText("Borrar archivo");
+        BorrarArchivos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BorrarArchivosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BorrarArchivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, -1, -1));
+
+        CargArchivo.setText("Carga de archivo");
+        CargArchivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CargArchivoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CargArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 143, -1));
+
+        ActArchivos.setText("Actualizacion de archivos");
+        ActArchivos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActArchivosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ActArchivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, -1, -1));
+
+        jLabel1.setText("Bienvenido al area de manejo de archivos,");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, 50));
+
+        jLabel2.setText("Porfavor dale click a la accion que desas realizar:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 6, 390, 290));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ActArchivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActArchivosActionPerformed
+        Funciones.VerificarEntrada(false, "Debes cargar un archivo antes para poder actualizarlo");
         this.dispose();
-        Ventana1_2 vm1 = new Ventana1_2();
-        vm1.setVisible(true);
-        vm1.setLocationRelativeTo(null);
-        
     }//GEN-LAST:event_ActArchivosActionPerformed
 
     private void CargArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CargArchivoActionPerformed
+        Funciones.VerificarEntrada(true, "El archivo ya esta cargado para cambiarlo, dale al boton de actualizacion de archivos");
         this.dispose();
-        Ventana1 v2 = new Ventana1();
-        v2.setVisible(true);
-        v2.setLocationRelativeTo(null);
 
     }//GEN-LAST:event_CargArchivoActionPerformed
 
@@ -92,6 +108,16 @@ public class Ventana1_1 extends javax.swing.JFrame {
         vm1.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_BotonSalirMenuActionPerformed
+
+    private void BorrarArchivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarArchivosActionPerformed
+        Funciones.borrartxt();
+        JOptionPane.showMessageDialog(null, "el archivo se ha borrado");
+        this.dispose();
+        VentanaMenu vm1 = new VentanaMenu();
+        vm1.setVisible(true);
+        vm1.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_BorrarArchivosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,8 +156,11 @@ public class Ventana1_1 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton ActArchivos;
+    private javax.swing.JToggleButton BorrarArchivos;
     private javax.swing.JButton BotonSalirMenu;
     private javax.swing.JToggleButton CargArchivo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

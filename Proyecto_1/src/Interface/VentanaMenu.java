@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Interface;
-import Clases.Funciones;
+
         
 /**
  *
@@ -37,9 +37,6 @@ public class VentanaMenu extends javax.swing.JFrame {
         RealizarPedido = new javax.swing.JButton();
         SolicitarProductosOtroAlmacen = new javax.swing.JButton();
         AgregarAlmacen = new javax.swing.JButton();
-        AgregarCamino = new javax.swing.JButton();
-        StockAlmacen = new javax.swing.JButton();
-        MostrarGrafo = new javax.swing.JButton();
         SubTitulo = new javax.swing.JLabel();
         CerrarPrograma = new javax.swing.JButton();
 
@@ -55,7 +52,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         FondoMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloMenu.setFont(new java.awt.Font("BankGothic Lt BT", 0, 24)); // NOI18N
-        TituloMenu.setText("Bienvenido a OrganizedChaos");
+        TituloMenu.setText("Bienvenido a Islamigos");
         FondoMenu.add(TituloMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 40, -1, -1));
 
         BotonSalirMenu.setBackground(new java.awt.Color(255, 51, 51));
@@ -75,7 +72,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         });
         FondoMenu.add(CargarArchivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 118, -1, -1));
 
-        ReporteDisponibilidadAlmacen.setText("2. Reportes de disponibilidad por almacen");
+        ReporteDisponibilidadAlmacen.setText("2. Mostrar grafo");
         ReporteDisponibilidadAlmacen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ReporteDisponibilidadAlmacenActionPerformed(evt);
@@ -83,23 +80,14 @@ public class VentanaMenu extends javax.swing.JFrame {
         });
         FondoMenu.add(ReporteDisponibilidadAlmacen, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
 
-        RealizarPedido.setText("3. Realizar pedido");
+        RealizarPedido.setText("3. Mostrar cantidad de islas");
         FondoMenu.add(RealizarPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
-        SolicitarProductosOtroAlmacen.setText("4. Solicitar productos a otro almacén");
+        SolicitarProductosOtroAlmacen.setText("4. Identificacion de puentes");
         FondoMenu.add(SolicitarProductosOtroAlmacen, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
 
-        AgregarAlmacen.setText("5. Agregar un nuevo almacén");
+        AgregarAlmacen.setText("5. Modificar grafo");
         FondoMenu.add(AgregarAlmacen, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, -1, -1));
-
-        AgregarCamino.setText("6. Agregar un nuevo camino");
-        FondoMenu.add(AgregarCamino, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
-
-        StockAlmacen.setText("7. Gestión de stock de un almacén");
-        FondoMenu.add(StockAlmacen, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
-
-        MostrarGrafo.setText("8. Mostrar grafo");
-        FondoMenu.add(MostrarGrafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
         SubTitulo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         SubTitulo.setText("Dale Click a la opcion que prefiera:");
@@ -180,16 +168,13 @@ public class VentanaMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AgregarAlmacen;
-    private javax.swing.JButton AgregarCamino;
     private javax.swing.JButton BotonSalirMenu;
     private javax.swing.JButton CargarArchivos;
     private javax.swing.JButton CerrarPrograma;
     private javax.swing.JPanel FondoMenu;
-    private javax.swing.JButton MostrarGrafo;
     private javax.swing.JButton RealizarPedido;
     private javax.swing.JButton ReporteDisponibilidadAlmacen;
     private javax.swing.JButton SolicitarProductosOtroAlmacen;
-    private javax.swing.JButton StockAlmacen;
     private javax.swing.JLabel SubTitulo;
     private javax.swing.JLabel TituloMenu;
     private javax.swing.JPasswordField jPasswordField1;

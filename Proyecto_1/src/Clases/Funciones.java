@@ -4,9 +4,13 @@
  */
 package Clases;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import Interface.Ventana1;
+import Interface.VentanaMenu;
+import java.io.File;
+import javax.swing.JOptionPane;
+
+
+
 
 /**
  *
@@ -14,27 +18,33 @@ import java.io.IOException;
  */
 public class Funciones {
 
-    public void leer() {
+    public static boolean ArchivoExiste(File archivo) {
+        return archivo.isFile();
+    }
+    
+    public static void VerificarEntrada(boolean r, String y){
+        String a = "test\\Data\\usuarios.txt";
+        File f = new File(a);
+        if (Funciones.ArchivoExiste(f) == r) {
+            JOptionPane.showInternalMessageDialog(null, y);
+            VentanaMenu v = new VentanaMenu();
+            v.setVisible(true);
+            v.setLocationRelativeTo(null);
 
-        FileReader archivo;
-        BufferedReader leer;
-
-        try {
-            archivo = new FileReader("test\\Data\\nuevo_amazon.txt");
-            if (archivo.ready()) {
-                leer = new BufferedReader(archivo);
-                String cadena;
-                while ((cadena = leer.readLine()) != null) {            
-                    System.out.println(cadena);
-                    
-                }
-                
-            } else {
-                System.out.println("el archivo esta vacio");
-            }
-        } catch (IOException e) {
-            System.out.println("error:"+ e.getMessage());
+        } else {
+            Ventana1 v2 = new Ventana1();
+            v2.setVisible(true);
+            v2.setLocationRelativeTo(null);
         }
+    }
 
+    public static void borrartxt() {
+        // Ruta del archivo a borrar
+        String rutaArchivo = "test\\Data\\usuarios.txt";
+
+        // Crear un objeto File con la ruta del archivo
+        File archivo = new File(rutaArchivo);
+
+        archivo.delete(); // Borrar el archivo
     }
 }
