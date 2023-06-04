@@ -4,6 +4,7 @@
  */
 package Interface;
 
+import Clases.Funciones;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -133,7 +134,8 @@ public class Ventana1 extends javax.swing.JFrame {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Cancelado");
         }
-
+        Funciones.BorraG();
+        Funciones.CargarGrafo();
     }//GEN-LAST:event_CargarArchivoActionPerformed
 
     private void MostrarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarDireccionActionPerformed

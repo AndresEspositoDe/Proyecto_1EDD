@@ -5,7 +5,8 @@
 package Interface;
 
 import Clases.Funciones;
-import java.io.File;
+import Grafo.Grafo;
+
 import javax.swing.JOptionPane;
 
 /**
@@ -112,6 +113,7 @@ public class Ventana1_1 extends javax.swing.JFrame {
     private void BorrarArchivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarArchivosActionPerformed
         Funciones.borrartxt();
         JOptionPane.showMessageDialog(null, "el archivo se ha borrado");
+        Funciones.BorraG();
         this.dispose();
         VentanaMenu vm1 = new VentanaMenu();
         vm1.setVisible(true);
